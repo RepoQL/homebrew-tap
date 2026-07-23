@@ -2,8 +2,18 @@
 # Do not edit the rendered copy in the tap by hand — the next release overwrites it.
 class Rql < Formula
   desc "Structural code index that gives coding agents extra senses"
-  homepage "https://repoql.ai"
+  homepage "https://repoql.com"
   version "1.6.33"
+
+  livecheck do
+    # FormulaAudit/LivecheckUrlSymbol misfires here: it treats the first `url`
+    # call in the body — this one — as the stable url and suggests `url :stable`
+    # against itself. The real stable urls live in the on_* blocks below and are
+    # versioned, so they cannot drive livecheck. Audit waives that one cop via
+    # --except-cops (inline disables are rejected by `brew audit`).
+    url "https://downloads.repoql.ai/latest/version.txt"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   on_macos do
     on_arm do
@@ -35,11 +45,6 @@ class Rql < Formula
     <<~EOS
       Run `rql install` to set up agent integrations.
     EOS
-  end
-
-  livecheck do
-    url "https://downloads.repoql.ai/latest/version.txt"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   test do
