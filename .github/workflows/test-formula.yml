@@ -1,0 +1,50 @@
+name: test-formula
+
+# Proves every pushed formula the way a user consumes it: brew's own linters,
+# then a live install from the CDN and the formula's test block, on each
+# platform Homebrew supports (Linux ARM is not one — that tarball's on_arm
+# block ships unproven).
+#
+# FormulaAudit/LivecheckUrlSymbol is waived everywhere: the cop misreads the
+# livecheck url — the first `url` call in the body — as the formula's stable
+# url and suggests a self-referential `url :stable`. The real stable urls are
+# the versioned tarballs in the on_* blocks, which cannot drive livecheck.
+# (`brew audit` rejects inline rubocop disables, so the waiver lives here.)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, macos-15-intel, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Tap this commit
+        run: |
+          brew tap repoql/tap || true
+          git -C "$(brew --repository repoql/tap)" fetch origin "$GITHUB_SHA"
+          git -C "$(brew --repository repoql/tap)" checkout "$GITHUB_SHA"
+
+      - name: Style
+        run: brew style --except-cops FormulaAudit/LivecheckUrlSymbol repoql/tap
+
+      - name: Audit
+        run: brew audit --online --except-cops FormulaAudit/LivecheckUrlSymbol rql
+
+      - name: Install
+        run: brew install rql
+
+      - name: Test
+        run: brew test rql

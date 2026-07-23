@@ -1,6 +1,6 @@
 # RepoQL Homebrew Tap
 
-Homebrew formulae for [RepoQL](https://repoql.ai) — extra senses for coding agents.
+Homebrew formulae for [RepoQL](https://repoql.com) — extra senses for coding agents.
 
 ## Install
 
