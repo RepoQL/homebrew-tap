@@ -3,27 +3,27 @@
 class Rql < Formula
   desc "Structural code index that gives coding agents extra senses"
   homepage "https://repoql.ai"
-  version "1.6.32"
+  version "1.6.33"
 
   on_macos do
     on_arm do
-      url "https://downloads.repoql.ai/1.6.32/osx-arm64/rql-1.6.32-osx-arm64.tar.gz"
-      sha256 "0544555533c2703bbff06deffde70c403703cfe4129fe6e913d656f425a80923"
+      url "https://downloads.repoql.ai/1.6.33/osx-arm64/rql-1.6.33-osx-arm64.tar.gz"
+      sha256 "5fb7ea1ac9876945479c98975cfe9e90663b0effb94a8fd5e0148070974de5ec"
     end
     on_intel do
-      url "https://downloads.repoql.ai/1.6.32/osx-x64/rql-1.6.32-osx-x64.tar.gz"
-      sha256 "198855e8a0be38882d9817f63ae16fe40475baa3853799bd1de69fab65c22f1f"
+      url "https://downloads.repoql.ai/1.6.33/osx-x64/rql-1.6.33-osx-x64.tar.gz"
+      sha256 "7219b622d36772a972cb81b3d83ea5de74daeec1d5ba999afbf534c740ba87e5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://downloads.repoql.ai/1.6.32/linux-arm64/rql-1.6.32-linux-arm64.tar.gz"
-      sha256 "0f58a9ece8b190d70a85ef314df0f6965ea283da5dda165e33c099d4c5d10c60"
+      url "https://downloads.repoql.ai/1.6.33/linux-arm64/rql-1.6.33-linux-arm64.tar.gz"
+      sha256 "c78b03dcbcb546e6a9b248f1d4f5d884012c48a811b88f3766f0d36055258a41"
     end
     on_intel do
-      url "https://downloads.repoql.ai/1.6.32/linux-x64/rql-1.6.32-linux-x64.tar.gz"
-      sha256 "e4a7763856e730fe085b808b64f38f967898470162b9fab145705186f83c01d9"
+      url "https://downloads.repoql.ai/1.6.33/linux-x64/rql-1.6.33-linux-x64.tar.gz"
+      sha256 "6c784abd35320c96c0d42767d029f3845cde1befe593c98f96e38e732eeb2346"
     end
   end
 
