@@ -18,22 +18,22 @@ class Rql < Formula
   on_macos do
     on_arm do
       url "https://downloads.repoql.ai/1.7.8/osx-arm64/rql-1.7.8-osx-arm64.tar.gz"
-      sha256 "8c281a6e4816171021c8f9ec5205ab4cde5034eef322ee7213b3e7573cbe3796"
+      sha256 "990ad0de99e318cab5e02f7b465f4917abe9c5a1c288ef17e47b49d3281eaa88"
     end
     on_intel do
       url "https://downloads.repoql.ai/1.7.8/osx-x64/rql-1.7.8-osx-x64.tar.gz"
-      sha256 "072c4c7a4bbf056ce9b453febbd065ef448625a97b861245b0c65a9760b397f2"
+      sha256 "1556009dc715ca7f63449ddd32880b80ac1bb3370fac7c9ae05630ee78ba7c80"
     end
   end
 
   on_linux do
     on_arm do
       url "https://downloads.repoql.ai/1.7.8/linux-arm64/rql-1.7.8-linux-arm64.tar.gz"
-      sha256 "7dcd72ad34995be609d830f3f99ceb2e7b0084c33d72fa68513ba4b20ea48880"
+      sha256 "bcf16cca1d045117971c47dc5ed11efa03902944ae9f3c3a97c7810ac18bbb5e"
     end
     on_intel do
       url "https://downloads.repoql.ai/1.7.8/linux-x64/rql-1.7.8-linux-x64.tar.gz"
-      sha256 "a01627069a46ca88ae3dfe534fa75189a1135694d925a3c93f315c434ad0acca"
+      sha256 "538deb1e112f6d6e06880725739575ce7688ce63a9c5ad62adcb1ac10e29572f"
     end
   end
 
