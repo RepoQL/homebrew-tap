@@ -3,7 +3,7 @@
 class Rql < Formula
   desc "Structural code index that gives coding agents extra senses"
   homepage "https://repoql.com"
-  version "1.7.14"
+  version "1.7.15"
 
   livecheck do
     # FormulaAudit/LivecheckUrlSymbol misfires here: it treats the first `url`
@@ -17,23 +17,23 @@ class Rql < Formula
 
   on_macos do
     on_arm do
-      url "https://downloads.repoql.ai/1.7.14/osx-arm64/rql-1.7.14-osx-arm64.tar.gz"
-      sha256 "e22ff91c61a48177360b74d80ebf4d35eaaf90c9dcedb2ebf13123f12f2b450f"
+      url "https://downloads.repoql.ai/1.7.15/osx-arm64/rql-1.7.15-osx-arm64.tar.gz"
+      sha256 "59194d134b4523f5aa1a05bfdc345f4126857493912b6aba1770f2486db4bd50"
     end
     on_intel do
-      url "https://downloads.repoql.ai/1.7.14/osx-x64/rql-1.7.14-osx-x64.tar.gz"
-      sha256 "4a369fed7a8d46f35a348c412087cd014c84fbb26cb96c96478dbc91f6820b7a"
+      url "https://downloads.repoql.ai/1.7.15/osx-x64/rql-1.7.15-osx-x64.tar.gz"
+      sha256 "024d8f3f95f3baacf87e0e7e9b2804ecc6ee71ddcd0b6cf60a8e35a24f06db68"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://downloads.repoql.ai/1.7.14/linux-arm64/rql-1.7.14-linux-arm64.tar.gz"
-      sha256 "91df38774de51205926bbda932fc06e9713d9e3bd400aaf6eea03c0f933f93e1"
+      url "https://downloads.repoql.ai/1.7.15/linux-arm64/rql-1.7.15-linux-arm64.tar.gz"
+      sha256 "9684e12a41543cabffd3974200f02cad9272e3fa4d3d0b789d1c98844adf0b39"
     end
     on_intel do
-      url "https://downloads.repoql.ai/1.7.14/linux-x64/rql-1.7.14-linux-x64.tar.gz"
-      sha256 "cf7b030fbac947ac0be1715e1a5e80ffa489b9ce7294470636baef07b0d0a866"
+      url "https://downloads.repoql.ai/1.7.15/linux-x64/rql-1.7.15-linux-x64.tar.gz"
+      sha256 "dfe995ecfd96e79ee69236fd18a66aeafd75b65e5c84cf7439e3f24e6c1d7e44"
     end
   end
 
